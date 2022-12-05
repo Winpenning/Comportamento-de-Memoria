@@ -9,28 +9,28 @@ namespace Comportamento_de_Memoria
 {
     public class Pessoa
     {
-        private string _name;
+        private string Name { get; set; }
         private int Registration { get; set; }
 
-        private string? _project;
+        private string? Project { get; set; }
 
         public Pessoa(string name, int registration, string? project)
         {
-            _name = name;
+            Name = name;
             Registration = registration;
-            _project = project;
+            Project = project;
         }
 
 
         public override string ToString()
         {
-            if(_project != null)
+            if(Project != null)
             {
-                return "\nName: " + _name + "\nRegistration: " + Registration + "\nProject: "+ _project;
+                return "\nName: " +Name+ "\nRegistration: " + Registration + "\nProject: "+Project;
             }
             else
             {
-                return "\nName: " + _name +
+                return "\nName: " + Name +
                        "\nRegistration: " + Registration +
                        "\nProject: No project";
             }
