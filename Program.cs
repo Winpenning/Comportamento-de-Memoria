@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Globalization;
 namespace Comportamento_de_Memoria
 {
     class Program
@@ -7,9 +7,11 @@ namespace Comportamento_de_Memoria
         static void Main(string[] args)
         {
             string name, esc;
-            int registration;
-
+            int registration,n;
+            double sum = 0.0;
             string? project;
+
+            
 
             Console.Write("Type your name: ");
             name = Console.ReadLine();
@@ -24,6 +26,23 @@ namespace Comportamento_de_Memoria
             {
                 Console.Write("Type the name of your project: ");
                 project= Console.ReadLine();
+
+                Console.Write("How many reviews has your project had?");
+                n = int.Parse(Console.ReadLine());
+
+                double[] array = new double[n]; 
+
+                for(int i = 0; i<n; i++)
+                {
+                    Console.WriteLine("Enter the score "+ i +": ");
+                    array[i] = double.Parse(Console.ReadLine());
+                    sum += array[i];
+                }
+                double avg = sum / n;
+                Console.WriteLine("average score: " + avg);
+
+                
+
             }
             else
             {

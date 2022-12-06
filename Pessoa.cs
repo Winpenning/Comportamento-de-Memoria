@@ -11,6 +11,8 @@ namespace Comportamento_de_Memoria
     {
         private string Name { get; set; }
         private int Registration { get; set; }
+        private int n { get; set; }
+        private double[] array { get; set; }
 
         private string? Project { get; set; }
 
